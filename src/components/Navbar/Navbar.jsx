@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import '../../Utils.module.css';
 import styles from './Navbar.module.css';
 
@@ -7,29 +8,26 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
   return (
     <nav className={styles.navbar + ' container'}>
       {/* logo */}
-      <a className="logoLink" href="/">
+      <Link className="logoLink" to="/">
         <h1 className={styles.logo}>Quick Quiz</h1>
-      </a>
+      </Link>
 
       {/* nav menu */}
-      <ul
-        className={
-          !navOpen ? `${styles.menu} ${styles.open}` : `${styles.menu}`
-        }>
+      <ul className={`${styles.menu} ${!navOpen && styles.open}`}>
         <li className={styles.menuItem}>
-          <a className={styles.menuLink} href="">
+          <Link className={styles.menuLink} to="/topics">
             Topics
-          </a>
+          </Link>
         </li>
         <li className={styles.menuItem}>
-          <a className={styles.menuLink} href="">
+          <Link className={styles.menuLink} to="/statistics">
             Statistics
-          </a>
+          </Link>
         </li>
         <li className={styles.menuItem}>
-          <a className={styles.menuLink} href="">
+          <Link className={styles.menuLink} to="/blogs">
             Blogs
-          </a>
+          </Link>
         </li>
       </ul>
 
@@ -41,7 +39,7 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
             src="http://hawthornschoolforgirls.com/wp-content/uploads/2016/01/tutor-8.jpg"
             alt="user"
           />
-          <span className={styles.userText}>John Doe</span>
+          <span className={styles.userName}>John Doe</span>
         </a>
         <button
           className={styles.navToggle + ' btn'}

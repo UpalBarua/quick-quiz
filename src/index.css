@@ -3,17 +3,17 @@
 /* -------------------- */
 :root {
   /* colors */
-  --clr-light-300: #fff;
-  --clr-light-400: #fff;
-  --clr-light-500: #fff;
+  --clr-light-300: #ffffff;
+  --clr-light-400: #e6e6e6;
+  --clr-light-500: #cccccc;
 
-  --clr-dark-300: #000;
-  --clr-dark-400: #000;
-  --clr-dark-500: #000;
+  --clr-dark-300: #1a1a1a;
+  --clr-dark-400: #000000;
+  --clr-dark-500: #333333;
 
-  --clr-accent-300: #add8e6;
+  --clr-accent-300: #b5dce9;
   --clr-accent-400: #add8e6;
-  --clr-accent-500: #add8e6;
+  --clr-accent-500: #9cc2cf;
 
   /* typography */
   --ff-primary: sans-serif;

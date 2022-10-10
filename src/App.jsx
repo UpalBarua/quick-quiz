@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Main from './layouts/Main';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Main />,
+    children: [
+      {
+        path: '/topics',
+        element: <h1>This is topic</h1>,
+      },
+      {
+        path: '/statistics',
+        element: <h1>This is statistics</h1>,
+      },
+      {
+        path: '/blogs',
+        element: <h1>This is blogs</h1>,
+      },
+    ],
+  },
+]);
 
 function App() {
-  const [navOpen, setNavOpen] = useState(false);
-  const navToggleHandler = () => {
-    setNavOpen(prevNavOpen => !prevNavOpen);
-    console.log(navOpen);
-  };
-
-  return (
-    <div>
-      <header className="header">
-        <Navbar navOpen={navOpen} navToggleHandler={navToggleHandler} />
-      </header>
-    </div>
-  );
+  return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;
