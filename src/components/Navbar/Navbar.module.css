@@ -1,0 +1,80 @@
+/* -------------------- */
+/* NAVIGATION BAR       */
+/* -------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--spacing-400);
+  box-shadow: var(--box-shadow);
+}
+
+.logo {
+  font-size: var(--fs-800);
+}
+
+.menu {
+  background-color: var(--clr-accent-400);
+  position: fixed;
+  top: 4.5rem;
+  right: 1rem;
+  padding: var(--spacing-300);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 500ms ease, transform 50ms ease;
+}
+
+.menu.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menuRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navToggle {
+  background-color: transparent;
+  color: var(--clr-light-400);
+  padding: var(--spacing-200);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.userImg {
+  display: none;
+  width: 2.5rem;
+  border: 2px solid var(--clr-light-400);
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 48em) {
+  .menu {
+    position: initial;
+    flex-direction: row;
+    padding: initial;
+    background-color: transparent;
+    gap: 1rem;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navToggle {
+    display: none;
+  }
+
+  .userImg {
+    display: block;
+  }
+}

@@ -19,12 +19,12 @@
   --ff-primary: sans-serif;
   --ff-secondary: sans-serif;
 
-  --fs-200: 0.625rem;
-  --fs-300: 1rem;
-  --fs-400: 1.125rem;
-  --fs-500: 1.5rem;
-  --fs-600: 2rem;
-  --fs-700: 2.5rem;
+  --fs-300: 0.625rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: clamp(1.35rem, 5vw + .25rem, 2rem);
 
   /* spacing */
   --spacing-100: 0.25rem;
@@ -38,6 +38,16 @@
   /* miscellaneous */
   --border-radius: 0.5rem;
   --box-shadow: box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+@media screen and (min-width: 48em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2rem;
+    --fs-700: 2.5rem;
+  }
 }
 
 /* -------------------- */
