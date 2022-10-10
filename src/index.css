@@ -24,7 +24,7 @@
   --fs-500: 1.125rem;
   --fs-600: 1.5rem;
   --fs-700: 2rem;
-  --fs-800: clamp(1.35rem, 5vw + .25rem, 2rem);
+  --fs-800: clamp(1.35rem, 5vw + 0.25rem, 2rem);
 
   /* spacing */
   --spacing-100: 0.25rem;
@@ -37,7 +37,7 @@
 
   /* miscellaneous */
   --border-radius: 0.5rem;
-  --box-shadow: box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  --box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 @media screen and (min-width: 48em) {
@@ -72,7 +72,10 @@ body {
   overflow-x: hidden;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.1;
 }
 
@@ -90,6 +93,8 @@ ul {
   list-style: none;
 }
 
-button, input, textarea {
-  font: inherit
+button,
+input,
+textarea {
+  font: inherit;
 }
