@@ -7,6 +7,7 @@ const QuestionCard = ({ questionData }) => {
   const { question, options, id, correctAnswer } = questionData;
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
+  console.log(question);
 
   const answerSelectHandler = answer => {
     return () => {

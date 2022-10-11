@@ -1,0 +1,10 @@
+.blogContainer {
+  margin-block: var(--spacing-700);
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: 700;
+  text-align: center;
+  margin-block: var(--spacing-600);
+}
