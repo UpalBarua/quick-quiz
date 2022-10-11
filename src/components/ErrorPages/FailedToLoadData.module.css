@@ -1,0 +1,25 @@
+.wrapper {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.icon {
+  font-size: var(--fs-900);
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: 700;
+}
+
+.reloadBtn {
+  background-color: var(--clr-dark-500);
+  border-radius: var(--border-radius);
+  color: var(--clr-light-400);
+  margin-top: var(--spacing-300);
+}
