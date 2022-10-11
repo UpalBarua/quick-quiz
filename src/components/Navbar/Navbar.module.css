@@ -13,11 +13,13 @@
   justify-content: space-between;
   align-items: center;
   padding-block: var(--spacing-400);
-  box-shadow: var(--box-shadow);
 }
 
 .logo {
   font-size: var(--fs-800);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
 .menu {

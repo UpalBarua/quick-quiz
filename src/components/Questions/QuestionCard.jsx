@@ -1,47 +1,67 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import parse from 'html-react-parser';
 import { AiOutlineEye } from 'react-icons/ai';
 import styles from './QuestionCard.module.css';
+import { toastContext } from '../../context/ToastContext';
 
 const QuestionCard = ({ questionData }) => {
   const { question, options, id, correctAnswer } = questionData;
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
-  console.log(question);
+  const { toastToggle } = useContext(toastContext);
+  const [cardBg, setCardBg] = useState('var(--clr-dark-500)');
 
   const answerSelectHandler = answer => {
     return () => {
-      setSelectedAnswer(prevSelectedAnswer => (prevSelectedAnswer = answer));
+      setSelectedAnswer(answer);
     };
   };
+
+  useEffect(() => {
+    setIsAnswerCorrect(selectedAnswer === correctAnswer);
+  }, [selectedAnswer]);
 
   const answerSubmitHandler = event => {
     event.preventDefault();
 
     if (!selectedAnswer.length) {
-      alert('no answer selected');
+      toastToggle('Primary', {
+        title: 'No Input',
+        description: "You didn't choose any answer!",
+      });
       return;
     }
 
-    setIsAnswerCorrect(prevIsAnswerCorrect => {
-      return (prevIsAnswerCorrect = selectedAnswer === correctAnswer);
-    });
+    // setIsAnswerCorrect(selectedAnswer === correctAnswer);
 
-    console.log(`Your answer is ${isAnswerCorrect ? 'correct' : 'wrong'}`);
+    if (isAnswerCorrect) {
+      toastToggle('Success', {
+        title: 'Correct',
+        description: 'Your answer was correct!',
+      });
+      setCardBg('var(--clr-green-400)');
+    } else {
+      toastToggle('Warning', {
+        title: 'Incorrect',
+        description: 'Your answer was incorrect!',
+      });
+      setCardBg('var(--clr-red-400)');
+    }
   };
 
   const correctAnswerHandler = () => {
     console.log(`The correct answer is ${correctAnswer}`);
+    toastToggle('Success', {
+      title: 'Correct answer',
+      description: `${correctAnswer}`,
+    });
   };
 
   return (
     <div
       className={`${styles.questionCard} ${styles.correct}`}
       style={{
-        backgroundColor: 'var(--clr-dark-500)',
-        backgroundColor:
-          isAnswerCorrect !== null &&
-          (isAnswerCorrect ? 'var(--clr-green-400)' : 'var(--clr-red-400)'),
+        backgroundColor: cardBg,
       }}>
       {parse(question)}
 

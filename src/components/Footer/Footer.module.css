@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--clr-dark-500);
-  padding-block: var(--spacing-700);
+  background-color: var(--clr-dark-300);
+  padding-block: var(--spacing-400);
   box-shadow: var(--box-shadow);
   text-align: center;
 }
@@ -11,4 +11,10 @@
 .title {
   font-size: var(--fs-600);
   font-weight: 700;
+}
+
+@media screen and (min-width: 48em) {
+  .footer {
+    padding-block: var(--spacing-700);
+  }
 }

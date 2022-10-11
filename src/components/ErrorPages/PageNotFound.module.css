@@ -1,0 +1,6 @@
+.message {
+  text-align: center;
+  font-size: var(--fs-600);
+  font-weight: 700;
+  color: var(--clr-light-500);
+}

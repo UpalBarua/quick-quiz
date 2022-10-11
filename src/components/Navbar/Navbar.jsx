@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { ImQuestion } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import '../../Utils.module.css';
 import styles from './Navbar.module.css';
@@ -10,7 +11,10 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
       <nav className={`${styles.navbar} container`}>
         {/* logo */}
         <Link className="logoLink" to="/">
-          <h1 className={styles.logo}>Quick Quiz</h1>
+          <h1 className={styles.logo}>
+            QuickQuiz
+            <ImQuestion />
+          </h1>
         </Link>
         {/* nav menu */}
         <ul className={`${styles.menu} ${navOpen && styles.open}`}>
