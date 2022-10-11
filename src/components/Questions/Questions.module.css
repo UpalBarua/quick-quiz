@@ -1,3 +1,12 @@
-/* .5 {
-  max-width: min(37.5rem);
-} */
+.wrapper {
+  max-width: 37.5rem;
+  margin-inline: auto;
+  margin-block: var(--spacing-700);
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: 700;
+  text-align: center;
+  margin-block: var(--spacing-700);
+}

@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-dark-500);
+  padding-block: var(--spacing-700);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs-600);
+  font-weight: 700;
+}

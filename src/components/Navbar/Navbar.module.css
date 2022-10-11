@@ -1,6 +1,13 @@
 /* -------------------- */
 /* NAVIGATION BAR       */
 /* -------------------- */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--clr-dark-300);
+  box-shadow: var(--box-shadow);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;

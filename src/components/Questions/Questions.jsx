@@ -9,10 +9,12 @@ const Questions = () => {
 
   return (
     <div className={`container`}>
-      <h2 className={styles.title}>Quiz of {name}</h2>
-      {questions.map(question => (
-        <QuestionCard key={question.id} questionData={question} />
-      ))}
+      <div className={styles.wrapper}>
+        <h2 className={styles.title}>Quiz of {name}</h2>
+        {questions.map(question => (
+          <QuestionCard key={question.id} questionData={question} />
+        ))}
+      </div>
     </div>
   );
 };

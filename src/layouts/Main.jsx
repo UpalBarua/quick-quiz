@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 
 const Main = () => {
@@ -10,12 +11,9 @@ const Main = () => {
 
   return (
     <>
-      <header className="header">
-        <Navbar navOpen={navOpen} navToggleHandler={navToggleHandler} />
-      </header>
-      <Outlet>
-        <h1>Hey</h1>
-      </Outlet>
+      <Navbar navOpen={navOpen} navToggleHandler={navToggleHandler} />
+      <Outlet />
+      <Footer />
     </>
   );
 };

@@ -3,8 +3,6 @@
   padding: var(--spacing-400);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  max-width: min(37.5rem);
-  margin-inline: auto;
 }
 
 .questionCard + * {
