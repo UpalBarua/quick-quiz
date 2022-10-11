@@ -15,7 +15,7 @@
 
 .menu {
   background-color: var(--clr-dark-300);
-  position: fixed;
+  position: absolute;
   top: 4.5rem;
   right: 1rem;
   padding: var(--spacing-300);
@@ -54,7 +54,7 @@
 }
 
 .userImg {
-  width: 2.5rem;
+  width: 2.25rem;
   border: 2px solid var(--clr-dark-500);
   border-radius: 50%;
 }
@@ -76,6 +76,10 @@
 
   .navToggle {
     display: none;
+  }
+
+  .userImg {
+    width: 2.5rem;
   }
 
   .userName {

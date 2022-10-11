@@ -6,7 +6,6 @@ const Main = () => {
   const [navOpen, setNavOpen] = useState(false);
   const navToggleHandler = () => {
     setNavOpen(prevNavOpen => !prevNavOpen);
-    console.log(navOpen);
   };
 
   return (
@@ -14,7 +13,9 @@ const Main = () => {
       <header className="header">
         <Navbar navOpen={navOpen} navToggleHandler={navToggleHandler} />
       </header>
-      <Outlet />
+      <Outlet>
+        <h1>Hey</h1>
+      </Outlet>
     </>
   );
 };

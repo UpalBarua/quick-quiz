@@ -13,7 +13,12 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
       </Link>
 
       {/* nav menu */}
-      <ul className={`${styles.menu} ${!navOpen && styles.open}`}>
+      <ul className={`${styles.menu} ${navOpen && styles.open}`}>
+        <li className={styles.menuItem}>
+          <Link className={styles.menuLink} to="/">
+            Home
+          </Link>
+        </li>
         <li className={styles.menuItem}>
           <Link className={styles.menuLink} to="/topics">
             Topics
@@ -44,7 +49,7 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
         <button
           className={styles.navToggle + ' btn'}
           onClick={navToggleHandler}>
-          {!navOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+          {!navOpen ? <AiOutlineMenu /> : <AiOutlineClose />}
         </button>
       </div>
     </nav>

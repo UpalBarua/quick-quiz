@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Questions from './components/Questions/Questions';
 import Topics from './components/Topics/Topics';
 import Main from './layouts/Main';
 
@@ -9,9 +10,20 @@ const router = createBrowserRouter([
     element: <Main />,
     children: [
       {
+        path: '/',
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+        element: <Topics />,
+      },
+      {
         path: '/topics',
         loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         element: <Topics />,
+      },
+      {
+        path: '/questions/:id',
+        loader: ({ params }) =>
+          fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+        element: <Questions />,
       },
       {
         path: '/statistics',
@@ -22,6 +34,10 @@ const router = createBrowserRouter([
         element: <h1>This is blogs</h1>,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <h1>Nothing Found</h1>,
   },
 ]);
 

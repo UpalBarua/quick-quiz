@@ -6,7 +6,6 @@ import TopicsCard from './TopicsCard';
 
 const Topics = () => {
   const topicsData = useLoaderData();
-  console.log(topicsData.data);
 
   return (
     <section className={`${styles.topicsContainer} container`}>

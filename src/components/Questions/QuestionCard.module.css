@@ -1,0 +1,47 @@
+.questionCard {
+  background-color: var(--clr-dark-500);
+  padding: var(--spacing-400);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: min(37.5rem);
+  margin-inline: auto;
+}
+
+.questionCard + * {
+  margin-top: var(--spacing-300);
+}
+
+.questionCard > * + * {
+  margin-top: var(--spacing-200);
+}
+
+.option + * {
+  margin-top: var(--spacing-200);
+}
+
+.option {
+  background-color: var(--clr-dark-300);
+  padding: var(--spacing-300);
+  border-radius: var(--border-radius);
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.submitBtn {
+  background-color: transparent;
+  color: var(--cl-light-400);
+  font-weight: 700;
+  margin-top: var(--spacing-400);
+  margin-left: auto;
+}
+
+/* .radioInput {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: red;
+  min-height: 1rem;
+  min-width: 1rem;
+  border-radius: 50%;
+} */
