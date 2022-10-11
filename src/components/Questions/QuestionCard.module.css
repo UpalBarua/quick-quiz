@@ -7,11 +7,6 @@
   margin-inline: auto;
 }
 
-.questionCard.correct {
-  /* background-color: #568f56; */
-  /* background-color: #cc0000; */
-}
-
 .questionCard + * {
   margin-top: var(--spacing-300);
 }
@@ -34,12 +29,20 @@
   gap: 0.5rem;
 }
 
+.btnGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-500);
+}
+
+.answerBtn {
+  color: var(--cl-light-400);
+  font-size: var(--fs-600);
+}
+
 .submitBtn {
-  background-color: transparent;
   color: var(--cl-light-400);
   font-weight: 700;
-  margin-top: var(--spacing-400);
-  margin-left: auto;
 }
 
 /* .radioInput {

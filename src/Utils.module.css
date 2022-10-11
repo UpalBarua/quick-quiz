@@ -10,4 +10,11 @@
   justify-content: center;
   align-items: center;
   border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: 0;
 }
