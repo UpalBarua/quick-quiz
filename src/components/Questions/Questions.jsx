@@ -6,7 +6,6 @@ import styles from './Questions.module.css';
 
 const Questions = () => {
   const { name, questions } = useLoaderData().data;
-  console.log(useLoaderData().data);
 
   return (
     <div className={`container`}>
