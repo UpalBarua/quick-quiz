@@ -6,6 +6,7 @@
   top: 0;
   background-color: var(--clr-dark-300);
   box-shadow: var(--box-shadow);
+  z-index: 20;
 }
 
 .navbar {
