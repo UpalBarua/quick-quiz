@@ -1,15 +1,19 @@
 .hero {
+  display: flex;
   min-height: 10rem;
   padding-block: var(--spacing-600);
   /* margin-block: var(--spacing-600); */
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   background-image: url('https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .hero::after {
@@ -81,6 +85,9 @@
 
   .hero {
     min-height: 30rem;
+  }
+
+  .heroContainer {
     flex-direction: row;
     align-items: center;
     justify-content: center;

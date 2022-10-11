@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blog from './components/Blog/Blog';
+import Chart from './components/Chart/Chart';
 import FailedToLoadData from './components/ErrorPages/FailedToLoadData';
 import PageNotFound from './components/ErrorPages/PageNotFound';
 import Questions from './components/Questions/Questions';
@@ -33,7 +34,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/statistics',
-        element: <h1>This is statistics</h1>,
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+        element: <Chart />,
         errorElement: <FailedToLoadData />,
       },
       {
