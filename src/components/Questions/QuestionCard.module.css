@@ -43,11 +43,24 @@
   font-weight: 700;
 }
 
-/* .radioInput {
+.option {
+  position: relative;
+}
+
+.radioInput {
   -webkit-appearance: none;
   appearance: none;
-  background-color: red;
-  min-height: 1rem;
-  min-width: 1rem;
-  border-radius: 50%;
-} */
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: inherit;
+}
+
+.radioInput:checked {
+  background-color: var(--clr-dark-400);
+  opacity: 0.2;
+  outline: 0;
+}
