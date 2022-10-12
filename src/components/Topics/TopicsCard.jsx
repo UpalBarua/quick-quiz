@@ -8,7 +8,7 @@ const TopicsCard = ({ topic }) => {
       <img src={topic.logo} alt="" className={styles.topicImg} />
       <div className={styles.wrapper}>
         <h2 className={styles.name}>{topic.name}</h2>
-        <p className={styles.questionCount}>{topic.total} Questions!</p>
+        <p className={styles.questionCount}>{topic.total} Questions</p>
         <Link className={`${styles.cardBtn} btn`} to={`/questions/${topic.id}`}>
           Start practice
         </Link>

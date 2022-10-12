@@ -16,7 +16,6 @@ const Main = () => {
   return (
     <ToastProvider>
       <Navbar navOpen={navOpen} navToggleHandler={navToggleHandler} />
-      <Hero />
       <Outlet />
       <Footer />
       <Toast />

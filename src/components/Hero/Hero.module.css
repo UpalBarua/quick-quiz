@@ -50,6 +50,11 @@
   font-size: var(--fs-500);
 }
 
+.heroBtn:hover,
+.heroBtn:focus {
+  outline: 0;
+}
+
 .heroBtn:last-child {
   background-color: transparent;
 }
@@ -84,7 +89,7 @@
   }
 
   .hero {
-    min-height: 30rem;
+    min-height: 32rem;
   }
 
   .heroContainer {

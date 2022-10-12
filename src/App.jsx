@@ -4,11 +4,11 @@ import Blog from './components/Blog/Blog';
 import Chart from './components/Chart/Chart';
 import FailedToLoadData from './components/ErrorPages/FailedToLoadData';
 import PageNotFound from './components/ErrorPages/PageNotFound';
+import Hero from './components/Hero/Hero';
 import Questions from './components/Questions/Questions';
 import Topics from './components/Topics/Topics';
-import BlogsPage from './pages/BlogsPage';
-import Main from './pages/Main';
-import StatisticsPage from './pages/StatisticsPage';
+import Home from './Layouts/Home';
+import Main from './Layouts/Main';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
-        element: <Topics />,
+        element: <Home />,
         errorElement: <FailedToLoadData />,
       },
       {
@@ -34,18 +34,18 @@ const router = createBrowserRouter([
         element: <Questions />,
         errorElement: <FailedToLoadData />,
       },
+      {
+        path: '/statistics',
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+        element: <Chart />,
+        errorElement: <FailedToLoadData />,
+      },
+      {
+        path: '/blogs',
+        element: <Blog />,
+        errorElement: <FailedToLoadData />,
+      },
     ],
-  },
-  {
-    path: '/statistics',
-    loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
-    element: <StatisticsPage />,
-    errorElement: <FailedToLoadData />,
-  },
-  {
-    path: '/blogs',
-    element: <BlogsPage />,
-    errorElement: <FailedToLoadData />,
   },
   {
     path: '*',

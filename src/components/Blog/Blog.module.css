@@ -1,9 +1,10 @@
 .blogContainer {
   margin-block: var(--spacing-700);
+  min-height: 72rem;
 }
 
 .title {
-  font-size: var(--fs-600);
+  font-size: var(--fs-700);
   font-weight: 700;
   text-align: center;
   margin-block: var(--spacing-600);

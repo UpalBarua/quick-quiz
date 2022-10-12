@@ -8,10 +8,13 @@ const Topics = () => {
   const topicsData = useLoaderData();
 
   return (
-    <section className={`${styles.topicsContainer} container`}>
-      {topicsData.data.map(topic => (
-        <TopicsCard key={topic.id} topic={topic} />
-      ))}
+    <section className={styles.topics}>
+      <h2 className={styles.title}>Start Practicing</h2>
+      <div className={`${styles.topicsContainer} container`}>
+        {topicsData.data.map(topic => (
+          <TopicsCard key={topic.id} topic={topic} />
+        ))}
+      </div>
     </section>
   );
 };

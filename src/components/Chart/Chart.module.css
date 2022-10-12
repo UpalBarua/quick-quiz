@@ -4,9 +4,18 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  min-height: 30rem;
+  margin-block: var(--spacing-700);
 }
 
 .title {
-  font-size: var(--fs-600);
+  font-size: var(--fs-700);
   font-weight: 700;
+  margin-block: var(--spacing-600);
+}
+
+@media screen and (min-width: 48em) {
+  .chart {
+    margin-block: var(--spacing-800);
+  }
 }

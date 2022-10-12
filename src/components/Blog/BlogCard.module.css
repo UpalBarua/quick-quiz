@@ -8,7 +8,7 @@
 }
 
 .card + * {
-  margin-top: var(--spacing-400);
+  margin-top: var(--spacing-500);
 }
 
 .question {
@@ -40,5 +40,8 @@
   .card {
     flex-direction: row;
     align-items: center;
+  }
+  .text {
+    max-width: 65ch;
   }
 }
