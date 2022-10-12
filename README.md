@@ -10,6 +10,6 @@ QuickQuiz is a quiz website/app.
 
 ## About ❔
 
-- Lorem ipsum dolor sit amet, consectetur adipisicing elit
-- Lorem ipsum dolor sit amet, consectetur adipisicing elit
-- Lorem ipsum dolor sit amet, consectetur adipisicing elit
+- Responsive navbar and toast notifications were created from scratch.
+- Quiz forms get disabled after submitting answer.
+- A bar at the bottom shows how many answered questions are correct or wrong.
