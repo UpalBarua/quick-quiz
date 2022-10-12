@@ -2,7 +2,7 @@
 
 QuickQuiz is a quiz website/app.
 
-Live Site: https://rad-custard-83f4fd.netlify.app/questions/
+Live Site: https://rad-custard-83f4fd.netlify.app
 
 ## Tools used ️⚒️
 
