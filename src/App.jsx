@@ -1,14 +1,13 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Blog from './components/Blog/Blog';
+import Main from './Layouts/Main';
+import Home from './Layouts/Home';
+import Topics from './components/Topics/Topics';
+import Questions from './components/Questions/Questions';
 import Chart from './components/Chart/Chart';
+import Blog from './components/Blog/Blog';
 import FailedToLoadData from './components/ErrorPages/FailedToLoadData';
 import PageNotFound from './components/ErrorPages/PageNotFound';
-import Hero from './components/Hero/Hero';
-import Questions from './components/Questions/Questions';
-import Topics from './components/Topics/Topics';
-import Home from './Layouts/Home';
-import Main from './Layouts/Main';
 
 const router = createBrowserRouter([
   {

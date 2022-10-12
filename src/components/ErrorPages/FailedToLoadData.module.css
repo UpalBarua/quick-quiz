@@ -1,28 +1,38 @@
+/* -------------------- */
+/* FAILED TO LOAD DATA  */
+/* -------------------- */
 .wrapper {
-  height: 70vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 0.5rem;
+  height: 70vh;
+  justify-content: center;
   text-align: center;
 }
 
 .icon {
-  font-size: var(--fs-900);
   color: var(--clr-red-400);
+  font-size: var(--fs-900);
 }
 
 .title {
+  color: var(--clr-red-400);
+  font-family: var(--ff-secondary);
   font-size: var(--fs-600);
   font-weight: 700;
-  font-family: var(--ff-secondary);
-  color: var(--clr-red-400);
 }
 
 .reloadBtn {
-  background-color: var(--clr-dark-500);
+  background-color: var(--clr-dark-400);
   border-radius: var(--border-radius);
   color: var(--clr-light-400);
   margin-top: var(--spacing-300);
+  box-shadow: var(--box-shadow);
+}
+
+.reloadBtn:hover,
+.reloadBtn:focus {
+  outline: 0;
+  background-color: var(--clr-dark-500);
 }

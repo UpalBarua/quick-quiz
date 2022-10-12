@@ -1,13 +1,16 @@
+/* -------------------- */
+/* TOAST MODULE         */
+/* -------------------- */
 .toast {
+  align-items: center;
+  background-color: var(--clr-dark-400);
+  border-radius: var(--border-radius);
+  bottom: 0.5rem;
+  box-shadow: var(--box-shadow);
   display: flex;
   gap: 0.5rem;
-  align-items: center;
   padding: var(--spacing-300);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  background-color: var(--clr-dark-400);
   position: fixed;
-  bottom: 0.5rem;
   right: 50%;
   transform: translateX(50%) translateY(15rem);
   width: min(90%, 18rem);
@@ -20,14 +23,13 @@
 
 .title {
   font-weight: 700;
-  /* color: var(--clr-green-400); */
 }
 
 .icon {
-  display: flex;
   align-items: center;
+  display: flex;
   font-size: 2.5rem;
-  /* color: var(--clr-green-400); */
+  margin-right: var(--spacing-100);
 }
 
 @media screen and (min-width: 48em) {

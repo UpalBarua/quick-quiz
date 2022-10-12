@@ -12,6 +12,7 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
+  transition: all 350ms ease;
 }
 
 .btn:hover,

@@ -1,16 +1,15 @@
 /* -------------------- */
 /* TOPICS CARD          */
 /* -------------------- */
-
 .card {
+  align-items: center;
   background-color: var(--clr-dark-400);
-  padding: var(--spacing-200);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   display: flex;
-  align-items: center;
-  text-align: start;
   gap: 1rem;
+  padding: var(--spacing-200);
+  text-align: start;
 }
 
 .wrapper {
@@ -33,10 +32,11 @@
 
 .cardBtn {
   background-color: var(--clr-accent-400);
-  color: var(--clr-light-400);
   border-radius: var(--border-radius);
-  font-weight: 700;
+  color: var(--clr-light-400);
   font-size: var(--fs-400);
+  font-weight: 700;
+  box-shadow: var(--box-shadow);
 }
 
 .cardBtn:hover,
@@ -48,13 +48,13 @@
 @media screen and (min-width: 48em) {
   .card {
     flex-direction: column;
-    text-align: center;
     padding: var(--spacing-300);
+    text-align: center;
   }
 
   .topicImg {
-    width: 100%;
     height: auto;
+    width: 100%;
   }
 
   .wrapper {
@@ -62,7 +62,7 @@
   }
 
   .cardBtn {
-    width: 100%;
     margin-top: var(--spacing-200);
+    width: 100%;
   }
 }

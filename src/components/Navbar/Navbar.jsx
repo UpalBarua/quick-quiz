@@ -1,12 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { ImQuestion } from 'react-icons/im';
-import { Link, NavLink } from 'react-router-dom';
-import '../../Utils.module.css';
 import styles from './Navbar.module.css';
+import userImg from '../../assets/user-img.png';
+import '../../Utils.module.css';
 
 const activeStyles = {
-  // textDecoration: 'underline',
   color: 'var(--clr-accent-300)',
 };
 
@@ -14,15 +13,10 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
   return (
     <header className={styles.header}>
       <nav className={`${styles.navbar} container`}>
-        {/* logo */}
         <NavLink className="logoLink" to="/">
-          <h1 className={styles.logo}>
-            QQ
-            {/* <ImQuestion /> */}
-          </h1>
+          <h1 className={styles.logo}>QQ</h1>
         </NavLink>
 
-        {/* nav menu */}
         <ul className={`${styles.menu} ${navOpen && styles.open}`}>
           <li className={styles.menuItem}>
             <NavLink
@@ -30,7 +24,6 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
               to="/"
               end
               style={({ isActive }) => (isActive ? { ...activeStyles } : {})}>
-              {' '}
               Home
             </NavLink>
           </li>
@@ -60,16 +53,12 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
           </li>
         </ul>
 
-        {/* user */}
         <div className={styles.menuRight}>
           <NavLink className={styles.user} to="/user">
-            <img
-              className={styles.userImg}
-              src="http://hawthornschoolforgirls.com/wp-content/uploads/2016/01/tutor-8.jpg"
-              alt="user"
-            />
+            <img className={styles.userImg} src={userImg} alt="user" />
             <span className={styles.userName}>Upal Barua</span>
           </NavLink>
+
           <button
             className={styles.navToggle + ' btn'}
             onClick={navToggleHandler}>

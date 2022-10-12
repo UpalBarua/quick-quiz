@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../Utils.module.css';
 import styles from './Hero.module.css';
+import '../../Utils.module.css';
 
 const Hero = () => {
   return (
     <section className={`${styles.hero}`}>
-      <div className={styles.heroContainer + ' container'}>
+      <div className={`${styles.heroContainer} container`}>
         <h2 className={styles.logo}>Quick Quiz</h2>
         <div className={styles.wrapper}>
           <p className={styles.title}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-            illum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Explicabo, provident? Lorem ipsum dolor sit amet
+            There are a list of webdev quizzes that will clear your coding
+            concepts. Our webdev quiz covers javascript fundamentals, advance
+            concepts, array, DOM, and other topics.
           </p>
           <div className={styles.btnGroup}>
             <Link className={`${styles.heroBtn} btn`} to="/topics">

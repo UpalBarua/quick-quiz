@@ -1,7 +1,10 @@
+/* -------------------- */
+/* QUESTION CARD        */
+/* -------------------- */
 .questionCard {
-  padding: var(--spacing-400);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  padding: var(--spacing-400);
 }
 
 .questionCard + * {
@@ -12,18 +15,25 @@
   margin-top: var(--spacing-200);
 }
 
+.question > p {
+  font-size: var(--fs-500);
+  margin-bottom: var(--spacing-500);
+  text-align: center;
+}
+
 .option + * {
   margin-top: var(--spacing-200);
 }
 
 .option {
+  align-items: center;
   background-color: var(--clr-dark-500);
-  padding: var(--spacing-300);
   border-radius: var(--border-radius);
   display: inline-flex;
-  align-items: center;
-  width: 100%;
   gap: 0.5rem;
+  padding: var(--spacing-300);
+  width: 100%;
+  position: relative;
 }
 
 .btnGroup {
@@ -37,11 +47,16 @@
   font-size: var(--fs-600);
 }
 
+.answerBtn:hover,
+.answerBtn:focus {
+  outline: 0;
+  color: var(--clr-light-500);
+}
+
 .submitBtn {
   color: var(--clr-accent-400);
-  text-transform: uppercase;
-  font-weight: 700;
   font-size: var(--fs-500);
+  font-weight: 700;
 }
 
 .submitBtn:hover,
@@ -54,25 +69,18 @@
   color: var(--clr-light-500);
 }
 
-.option {
-  position: relative;
-}
-
 .radioInput {
   -webkit-appearance: none;
   appearance: none;
-  /* background-color: red; */
-  height: 100%;
-  width: 100%;
+  border-radius: inherit;
   display: block;
+  height: 100%;
   position: absolute;
   right: 0;
-  border-radius: inherit;
+  width: 100%;
 }
 
 .radioInput:checked {
-  /* background-color: var(--clr-dark-400); */
   border: 2px solid var(--clr-accent-400);
-  /* opacity: 0.2; */
   outline: 0;
 }

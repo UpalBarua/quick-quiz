@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { AiOutlineCheckCircle } from 'react-icons/ai';
 import { toastContext } from '../../context/ToastContext';
 import styles from './Toast.module.css';
 

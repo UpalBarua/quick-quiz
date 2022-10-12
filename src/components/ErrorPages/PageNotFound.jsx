@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BiMessageSquareError } from 'react-icons/bi';
 import styles from './PageNotFound.module.css';
 import '../../Utils.module.css';
-import { BiMessageSquareError } from 'react-icons/bi';
 
 const PageNotFound = () => {
   return (

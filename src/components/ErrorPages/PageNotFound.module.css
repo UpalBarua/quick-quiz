@@ -1,21 +1,24 @@
+/* -------------------- */
+/* PAGE NOT FOUND       */
+/* -------------------- */
 .errorPage {
-  min-height: 100vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   gap: 0.5rem;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
 .title {
+  align-items: center;
+  color: var(--clr-red-400);
+  display: flex;
+  font-family: var(--ff-secondary);
   font-size: var(--fs-900);
   font-weight: 700;
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
-  font-family: var(--ff-secondary);
-  color: var(--clr-red-400);
 }
 
 .text {
@@ -29,6 +32,12 @@
 .homeBtn {
   background-color: var(--clr-dark-300);
   border-radius: var(--border-radius);
-  margin-top: var(--spacing-300);
   box-shadow: var(--box-shadow);
+  margin-top: var(--spacing-300);
+}
+
+.homeBtn:hover,
+.homeBtn:focus {
+  outline: 0;
+  background-color: var(--clr-light-500);
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import '../../Utils.module.css';
-import Result from '../Result/Result';
 import QuestionCard from './QuestionCard';
+import Result from '../Result/Result';
 import styles from './Questions.module.css';
+import '../../Utils.module.css';
 
 const Questions = () => {
   const { name, questions } = useLoaderData().data;
@@ -11,28 +11,16 @@ const Questions = () => {
   const [wrongAnswers, setWrongAnswers] = useState([]);
 
   const correctCountHandler = answer => {
-    setCorrectAnswers(prevCorrectAnswers => {
-      if (
-        !(prevCorrectAnswers.includes(answer) && wrongAnswers.includes(answer))
-      ) {
-        return [...prevCorrectAnswers, answer];
-      }
-    });
+    setCorrectAnswers(prevCorrectAnswers => [...prevCorrectAnswers, answer]);
   };
 
   const wrongCountHandler = answer => {
-    setWrongAnswers(prevWrongAnswers => {
-      if (
-        !(prevWrongAnswers.includes(answer) && correctAnswers.includes(answer))
-      ) {
-        return [...prevWrongAnswers, answer];
-      }
-    });
+    setWrongAnswers(prevWrongAnswers => [...prevWrongAnswers, answer]);
   };
 
   return (
     <>
-      <div className={`container`}>
+      <div className="container">
         <div className={styles.wrapper}>
           <h2 className={styles.title}>Quiz of {name}</h2>
           {questions.map(question => (
@@ -45,6 +33,7 @@ const Questions = () => {
           ))}
         </div>
       </div>
+
       <Result correctAnswers={correctAnswers} wrongAnswers={wrongAnswers} />
     </>
   );

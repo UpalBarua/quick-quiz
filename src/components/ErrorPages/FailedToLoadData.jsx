@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiMessageSquareError } from 'react-icons/bi';
-import '../../Utils.module.css';
 import styles from './FailedToLoadData.module.css';
+import '../../Utils.module.css';
 
 const FailedToLoadData = () => {
   return (

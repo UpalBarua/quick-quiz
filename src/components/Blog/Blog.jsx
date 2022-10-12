@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../Utils.module.css';
-import styles from './Blog.module.css';
 import BlogCard from './BlogCard';
+import styles from './Blog.module.css';
+import '../../Utils.module.css';
 
 const BLOG_DATA = [
   {
@@ -20,7 +20,7 @@ const BLOG_DATA = [
   },
   {
     id: 3,
-    question: 'What is the useRef and how does is work?',
+    question: 'What is useRef and how does it work?',
     answer:
       'useRef hook is part of the React Hooks API. It is a function which takes one argument and returns an Object. The returned object has a property called current whose value is the argument passed to useRef. Some of the use cases of useRef hook are To access DOM elements To persist values in successive renders',
     img: 'https://reffect.co.jp/wp-content/uploads/2021/01/react_useRef-1024x585.png',

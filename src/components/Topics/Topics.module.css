@@ -1,26 +1,25 @@
 /* -------------------- */
 /* TOPICS               */
 /* -------------------- */
-.topics {
-  margin-block: var(--spacing-700);
-}
-
 .topicsContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  /* border: 2px solid lime; */
   align-items: start;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
   max-width: 30rem;
   min-height: 30rem;
 }
 
+.topics {
+  margin-block: var(--spacing-700);
+}
+
 .title {
+  font-family: var(--ff-secondary);
   font-size: var(--fs-700);
   font-weight: 700;
-  text-align: center;
   margin-block: var(--spacing-700);
-  font-family: var(--ff-secondary);
+  text-align: center;
 }
 
 @media screen and (min-width: 48em) {
@@ -29,7 +28,7 @@
   }
 
   .topicsContainer {
-    max-width: 60rem;
     grid-template-columns: repeat(4, 1fr);
+    max-width: 60rem;
   }
 }

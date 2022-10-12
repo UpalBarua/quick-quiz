@@ -1,8 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import {
-  LineChart,
-  Line,
   CartesianGrid,
   Tooltip,
   XAxis,
@@ -11,12 +9,11 @@ import {
   AreaChart,
   Area,
 } from 'recharts';
-import '../../Utils.module.css';
 import styles from './Chart.module.css';
+import '../../Utils.module.css';
 
 const Chart = () => {
   const data = useLoaderData().data;
-  console.log(data);
 
   return (
     <section className={`${styles.chart} container`}>

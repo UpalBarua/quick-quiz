@@ -120,3 +120,7 @@ input,
 textarea {
   font: inherit;
 }
+
+fieldset {
+  border: 0;
+}

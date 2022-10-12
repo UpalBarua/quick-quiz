@@ -1,8 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import '../../Utils.module.css';
-import styles from './Topics.module.css';
 import TopicsCard from './TopicsCard';
+import styles from './Topics.module.css';
+import '../../Utils.module.css';
 
 const Topics = () => {
   const topicsData = useLoaderData();

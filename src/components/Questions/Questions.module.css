@@ -1,13 +1,16 @@
+/* -------------------- */
+/* QUESTIONS            */
+/* -------------------- */
 .wrapper {
-  max-width: 37.5rem;
-  margin-inline: auto;
   margin-block: var(--spacing-700);
+  margin-inline: auto;
+  max-width: 37.5rem;
 }
 
 .title {
+  font-family: var(--ff-secondary);
   font-size: var(--fs-700);
   font-weight: 700;
-  text-align: center;
   margin-block: var(--spacing-700);
-  font-family: var(--ff-secondary);
+  text-align: center;
 }
