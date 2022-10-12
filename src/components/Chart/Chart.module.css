@@ -1,21 +1,20 @@
 .chart {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
-  min-height: 30rem;
-  margin-block: var(--spacing-700);
+  min-height: 40rem;
+  margin-block: var(--spacing-600);
 }
 
 .title {
   font-size: var(--fs-700);
   font-weight: 700;
-  margin-block: var(--spacing-600);
+  margin-block: var(--spacing-500);
 }
 
 @media screen and (min-width: 48em) {
   .chart {
-    margin-block: var(--spacing-800);
+    margin-block: var(--spacing-700);
   }
 }

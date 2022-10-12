@@ -1,42 +1,61 @@
 import React from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { ImQuestion } from 'react-icons/im';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../../Utils.module.css';
 import styles from './Navbar.module.css';
+
+const activeStyles = {
+  textDecoration: 'underline',
+};
 
 const Navbar = ({ navOpen, navToggleHandler }) => {
   return (
     <header className={styles.header}>
       <nav className={`${styles.navbar} container`}>
         {/* logo */}
-        <Link className="logoLink" to="/">
+        <NavLink className="logoLink" to="/">
           <h1 className={styles.logo}>
             QuickQuiz
             <ImQuestion />
           </h1>
-        </Link>
+        </NavLink>
+
         {/* nav menu */}
         <ul className={`${styles.menu} ${navOpen && styles.open}`}>
           <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/">
+            <NavLink
+              className={`${styles.menuLink}`}
+              to="/"
+              end
+              style={({ isActive }) => (isActive ? { ...activeStyles } : {})}>
+              {' '}
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/topics">
+            <NavLink
+              className={styles.menuLink}
+              to="/topics"
+              style={({ isActive }) => (isActive ? { ...activeStyles } : {})}>
               Topics
-            </Link>
+            </NavLink>
           </li>
           <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/statistics">
+            <NavLink
+              className={styles.menuLink}
+              to="/statistics"
+              style={({ isActive }) => (isActive ? { ...activeStyles } : {})}>
               Statistics
-            </Link>
+            </NavLink>
           </li>
           <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/blogs">
+            <NavLink
+              className={styles.menuLink}
+              to="/blogs"
+              style={({ isActive }) => (isActive ? { ...activeStyles } : {})}>
               Blogs
-            </Link>
+            </NavLink>
           </li>
         </ul>
         {/* user */}
