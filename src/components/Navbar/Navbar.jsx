@@ -6,7 +6,8 @@ import '../../Utils.module.css';
 import styles from './Navbar.module.css';
 
 const activeStyles = {
-  textDecoration: 'underline',
+  // textDecoration: 'underline',
+  color: 'var(--clr-accent-300)',
 };
 
 const Navbar = ({ navOpen, navToggleHandler }) => {
@@ -16,8 +17,8 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
         {/* logo */}
         <NavLink className="logoLink" to="/">
           <h1 className={styles.logo}>
-            QuickQuiz
-            <ImQuestion />
+            QQ
+            {/* <ImQuestion /> */}
           </h1>
         </NavLink>
 
@@ -58,16 +59,17 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
             </NavLink>
           </li>
         </ul>
+
         {/* user */}
         <div className={styles.menuRight}>
-          <a className={styles.user} href="">
+          <NavLink className={styles.user} to="/user">
             <img
               className={styles.userImg}
               src="http://hawthornschoolforgirls.com/wp-content/uploads/2016/01/tutor-8.jpg"
               alt="user"
             />
-            <span className={styles.userName}>John Doe</span>
-          </a>
+            <span className={styles.userName}>Upal Barua</span>
+          </NavLink>
           <button
             className={styles.navToggle + ' btn'}
             onClick={navToggleHandler}>

@@ -3,7 +3,7 @@
 /* -------------------- */
 
 .card {
-  background-color: var(--clr-dark-500);
+  background-color: var(--clr-dark-400);
   padding: var(--spacing-200);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -27,12 +27,12 @@
 .topicImg {
   width: 6rem;
   height: 6rem;
-  background-color: var(--clr-dark-300);
+  background-color: var(--clr-dark-500);
   border-radius: var(--border-radius);
 }
 
 .cardBtn {
-  background-color: var(--clr-dark-300);
+  background-color: var(--clr-accent-400);
   color: var(--clr-light-400);
   border-radius: var(--border-radius);
   font-weight: 700;
@@ -42,7 +42,7 @@
 .cardBtn:hover,
 .cardBtn:focus {
   outline: 0;
-  background-color: var(--clr-dark-400);
+  background-color: var(--clr-accent-500);
 }
 
 @media screen and (min-width: 48em) {

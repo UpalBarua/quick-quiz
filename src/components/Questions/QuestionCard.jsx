@@ -13,7 +13,7 @@ const QuestionCard = ({
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const { toastToggle } = useContext(toastContext);
-  const [cardBg, setCardBg] = useState('var(--clr-dark-500)');
+  const [cardBg, setCardBg] = useState('var(--clr-dark-400)');
 
   const answerSelectHandler = answer => {
     return () => {
@@ -53,6 +53,8 @@ const QuestionCard = ({
       setCardBg('var(--clr-red-400)');
       wrongCountHandler(selectedAnswer);
     }
+
+    event.target.querySelector('button').disabled = 'true';
   };
 
   const correctAnswerHandler = () => {

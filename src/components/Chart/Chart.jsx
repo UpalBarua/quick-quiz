@@ -31,8 +31,8 @@ const Chart = () => {
           <Area
             type="monotone"
             dataKey="total"
-            stroke="#8884d8"
-            fill="#8884d8"
+            stroke="#7e57c2"
+            fill="#7e57c2"
           />
           <CartesianGrid stroke="#ccc" strokeDasharray="6 6" />
           <XAxis dataKey="name" />

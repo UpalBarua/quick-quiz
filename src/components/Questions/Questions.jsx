@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import '../../Utils.module.css';
+import Result from '../Result/Result';
 import QuestionCard from './QuestionCard';
 import styles from './Questions.module.css';
 
@@ -30,24 +31,22 @@ const Questions = () => {
   };
 
   return (
-    <div className={`container`}>
-      <div className={styles.wrapper}>
-        <h2 className={styles.title}>Quiz of {name}</h2>
-        {questions.map(question => (
-          <QuestionCard
-            key={question.id}
-            questionData={question}
-            correctCountHandler={correctCountHandler}
-            wrongCountHandler={wrongCountHandler}
-          />
-        ))}
+    <>
+      <div className={`container`}>
+        <div className={styles.wrapper}>
+          <h2 className={styles.title}>Quiz of {name}</h2>
+          {questions.map(question => (
+            <QuestionCard
+              key={question.id}
+              questionData={question}
+              correctCountHandler={correctCountHandler}
+              wrongCountHandler={wrongCountHandler}
+            />
+          ))}
+        </div>
       </div>
-      <div className={styles.result}>
-        <h3 className={styles.resultTitle}>Result</h3>
-        <p>Correct answers: {correctAnswers.length}</p>
-        <p>Wrong answers: {wrongAnswers.length}</p>
-      </div>
-    </div>
+      <Result correctAnswers={correctAnswers} wrongAnswers={wrongAnswers} />
+    </>
   );
 };
 

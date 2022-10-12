@@ -4,7 +4,7 @@
 .header {
   position: sticky;
   top: 0;
-  background-color: var(--clr-dark-300);
+  background-color: var(--clr-dark-400);
   box-shadow: var(--box-shadow);
   z-index: 20;
 }
@@ -17,14 +17,16 @@
 }
 
 .logo {
+  color: var(--clr-accent-400);
   font-size: var(--fs-800);
   display: flex;
   align-items: center;
   gap: 0.65rem;
+  font-family: var(--ff-secondary);
 }
 
 .menu {
-  background-color: var(--clr-dark-300);
+  background-color: var(--clr-dark-400);
   position: absolute;
   top: 4rem;
   right: 0.5rem;
@@ -70,12 +72,13 @@
 
 .userImg {
   width: 2.25rem;
-  border: 2px solid var(--clr-dark-500);
+  border: 3px solid var(--clr-accent-400);
   border-radius: 50%;
 }
 
 .userName {
   display: none;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 48em) {

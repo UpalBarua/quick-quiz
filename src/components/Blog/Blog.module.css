@@ -8,4 +8,5 @@
   font-weight: 700;
   text-align: center;
   margin-block: var(--spacing-700);
+  font-family: var(--ff-secondary);
 }

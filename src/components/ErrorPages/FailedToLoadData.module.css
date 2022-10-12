@@ -10,11 +10,14 @@
 
 .icon {
   font-size: var(--fs-900);
+  color: var(--clr-red-400);
 }
 
 .title {
   font-size: var(--fs-600);
   font-weight: 700;
+  font-family: var(--ff-secondary);
+  color: var(--clr-red-400);
 }
 
 .reloadBtn {

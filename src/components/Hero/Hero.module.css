@@ -23,8 +23,8 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--clr-dark-400);
-  opacity: 0.8;
+  background-color: var(--clr-dark-500);
+  opacity: 0.9;
 }
 
 .hero * {
@@ -39,11 +39,14 @@
 .logo {
   font-size: clamp(3rem, 10vw + 1rem, 8rem);
   font-weight: 700;
+  font-family: var(--ff-secondary);
+  color: var(--clr-accent-400);
 }
 
 .heroBtn {
   margin-top: var(--spacing-500);
-  background-color: var(--clr-dark-400);
+  background-color: var(--clr-accent-400);
+  /* color: var(--clr-dark-500); */
   border-radius: var(--border-radius);
   margin-right: var(--spacing-200);
   font-weight: bold;

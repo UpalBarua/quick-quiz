@@ -5,7 +5,7 @@
   padding: var(--spacing-300);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  background-color: var(--clr-dark-500);
+  background-color: var(--clr-dark-400);
   position: fixed;
   bottom: 0.5rem;
   right: 50%;
