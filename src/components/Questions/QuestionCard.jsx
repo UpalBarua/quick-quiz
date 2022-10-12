@@ -4,7 +4,11 @@ import { AiOutlineEye } from 'react-icons/ai';
 import styles from './QuestionCard.module.css';
 import { toastContext } from '../../context/ToastContext';
 
-const QuestionCard = ({ questionData }) => {
+const QuestionCard = ({
+  questionData,
+  correctCountHandler,
+  wrongCountHandler,
+}) => {
   const { question, options, id, correctAnswer } = questionData;
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
@@ -40,12 +44,14 @@ const QuestionCard = ({ questionData }) => {
         description: 'Your answer was correct!',
       });
       setCardBg('var(--clr-green-400)');
+      correctCountHandler(selectedAnswer);
     } else {
       toastToggle('Warning', {
         title: 'Incorrect',
         description: 'Your answer was incorrect!',
       });
       setCardBg('var(--clr-red-400)');
+      wrongCountHandler(selectedAnswer);
     }
   };
 
