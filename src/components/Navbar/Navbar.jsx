@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import styles from './Navbar.module.css';
-import userImg from '../../assets/user-img.png';
 import '../../Utils.module.css';
+import userImg from '../../assets/user-img.png';
 
 const activeStyles = {
   color: 'var(--clr-accent-300)',
@@ -43,14 +43,14 @@ const Navbar = ({ navOpen, navToggleHandler }) => {
               Statistics
             </NavLink>
           </li>
-          <li className={styles.menuItem}>
+          {/* <li className={styles.menuItem}>
             <NavLink
               className={styles.menuLink}
               to="/blogs"
               style={({ isActive }) => (isActive ? { ...activeStyles } : {})}>
               Blogs
             </NavLink>
-          </li>
+          </li> */}
         </ul>
 
         <div className={styles.menuRight}>
